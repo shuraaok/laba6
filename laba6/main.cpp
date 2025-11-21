@@ -84,25 +84,25 @@ void removeColumns(int** arr, int rows, int& columns, int* zerocolumns, int coun
 int main() {
     setlocale(LC_ALL, "Russian");
 
-    cout << "Ïóíêò 1\n";
+    cout << "ÐŸÑƒÐ½ÐºÑ‚ 1\n";
 
     int A, B, C, D;
 
     do {
-        cout << "Ââåäèòå A (êîë-âî ñòðîê ñíèçó): ";
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ A (ÐºÐ¾Ð»-Ð²Ð¾ ÑÑ‚Ñ€Ð¾Ðº ÑÐ½Ð¸Ð·Ñƒ): ";
         cin >> A;
-        if (A < 0) cout << "À íå ìîæåò áûòü ìåíüøå íóëÿ\n";
+        if (A < 0) cout << "Ð Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¼ÐµÐ½ÑŒÑˆÐµ Ð½ÑƒÐ»Ñ\n";
     } while (A < 0);
 
     do {
-        cout << "Ââåäèòå B (êîë-âî ñòîëáöîâ ñïðàâà): ";
+        cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ B (ÐºÐ¾Ð»-Ð²Ð¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð² ÑÐ¿Ñ€Ð°Ð²Ð°): ";
         cin >> B;
-        if (B < 0) cout << "Â íå ìîæåò áûòü ìåíüøå íóëÿ\n";
+        if (B < 0) cout << "Ð’ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¼ÐµÐ½ÑŒÑˆÐµ Ð½ÑƒÐ»Ñ\n";
     } while (B < 0);
 
-    cout << "Ââåäèòå C: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ C: ";
     cin >> C;
-    cout << "Ââåäèòå D: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ D: ";
     cin >> D;
 
     int Rows = 2;
@@ -119,7 +119,7 @@ int main() {
     arr[1][1] = D;
 
 
-    cout << "Èñõîäíàÿ ìàòðèöà:\n";
+    cout << "Ð˜ÑÑ…Ð¾Ð´Ð½Ð°Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ð°:\n";
     printM(arr, Rows, Columns);
 
     int rows = Rows + A;
@@ -139,7 +139,7 @@ int main() {
         }
     }
   
-    cout << "Èòîãîâàÿ ìàòðèöà " << rows << "x" << columns << ":\n";
+    cout << "Ð˜Ñ‚Ð¾Ð³Ð¾Ð²Ð°Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ð° " << rows << "x" << columns << ":\n";
     printM(arr, rows, columns);
 
     int count0 = 0;
@@ -147,19 +147,19 @@ int main() {
 
 
     if (count0 > 0) {
-        cout << "Ñòîëáöû, ñîäåðæàùèå íóëè: ";
+        cout << "Ð¡Ñ‚Ð¾Ð»Ð±Ñ†Ñ‹, ÑÐ¾Ð´ÐµÑ€Ð¶Ð°Ñ‰Ð¸Ðµ Ð½ÑƒÐ»Ð¸: ";
         for (int i = 0; i < count0; i++) {
             cout << zerocolumns[i] << " ";
         }
         cout << endl;
     }
     else {
-        cout << "Ýëåìåíòîâ, ðàâíûõ íóëþ, íåò\n";
+        cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð², Ñ€Ð°Ð²Ð½Ñ‹Ñ… Ð½ÑƒÐ»ÑŽ, Ð½ÐµÑ‚\n";
     }
 
     removeColumns(arr, rows, columns, zerocolumns, count0);
 
-    cout << "Ìàòðèöà ïîñëå óäàëåíèÿ ñòîëáöîâ:\n";
+    cout << "ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° Ð¿Ð¾ÑÐ»Ðµ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð²:\n";
     printM(arr, rows, columns);
 
     for (int i = 0; i < rows; i++) free(arr[i]);
@@ -167,12 +167,12 @@ int main() {
     free(zerocolumns);
 
 
-    cout << "Ïóíêò 2\n";
+    cout << "ÐŸÑƒÐ½ÐºÑ‚ 2\n";
 
     double a, b;
-    cout << "Ââåäèòå çíà÷åíèå a: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ a: ";
     cin >> a;
-    cout << "Ââåäèòå çíà÷åíèå b: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ b: ";
     cin >> b;
 
     double* pa = new double(a);
@@ -184,7 +184,7 @@ int main() {
     *pa = *pb;
     *pb = w;
 
-    cout << "Ïîñëå âñåõ îïåðàöèé:\n";
+    cout << "ÐŸÐ¾ÑÐ»Ðµ Ð²ÑÐµÑ… Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸Ð¹:\n";
     cout << "a = " << *pa << ", b = " << *pb << endl;
 
     delete pa;
